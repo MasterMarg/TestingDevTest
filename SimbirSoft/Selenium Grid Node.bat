@@ -1,0 +1,1 @@
+java -Dwebdriver.opera.driver=operadriver.exe -jar selenium-server-standalone-3.141.59.jar -port 4445 -role webdriver -hub  http://localhost:4444/grid/register -browser "browserName=opera, version=ANY, maxInstances=1, platform=Windows"
