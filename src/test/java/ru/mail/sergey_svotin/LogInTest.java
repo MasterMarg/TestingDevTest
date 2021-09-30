@@ -44,7 +44,7 @@ public class LogInTest {
         logInPage.inputUsername(ConfProperties.getProperty("UserName"));
         logInPage.pressLogInButton();
         logInPage.inputPassword(ConfProperties.getProperty("Password"));
-        /*logInPage.pressLogInButton();
+        logInPage.pressLogInButton();
         profilePage.pressUserMenu();
         profilePage.pressMailButton();
         int counter = 0;
@@ -52,13 +52,13 @@ public class LogInTest {
             if (webElement.findElement(By.cssSelector(ConfProperties.getProperty("MailCssSelector"))).getText().
                     equals("Simbirsoft Тестовое задание")) counter++; /* кириллица
                     equals(ConfProperties.getProperty("MailSubjectPattern")) counter++;*/
-        /*inboxMailPage.pressComposeMailButton();
+        inboxMailPage.pressComposeMailButton();
         inboxMailPage.inputAddress(ConfProperties.getProperty("E-mail"));
         inboxMailPage.inputMailSubject("Simbirsoft Тестовое задание. Свотин"); /*и снова кириллица
         inboxMailPage.inputMailSubject(ConfProperties.getProperty("SubjectPart1")+" "+ConfProperties.
                 getProperty("SubjectPart2")); */
-        /*inboxMailPage.inputMailText(Integer.toString(counter));
-        inboxMailPage.pressSendButton();*/
+        inboxMailPage.inputMailText(Integer.toString(counter));
+        inboxMailPage.pressSendButton();
     }
 
     /**
