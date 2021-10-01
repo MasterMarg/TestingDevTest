@@ -1,8 +1,0 @@
-# Project exclude paths
-/target/
-/.allure/
-/.idea/
-.gitignore
-TestingDevTest.iml
-mvn
-junit4maven$
