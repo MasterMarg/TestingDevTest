@@ -1,5 +1,6 @@
 package ru.mail.sergey_svotin;
 
+import io.qameta.allure.Description;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -40,6 +41,7 @@ public class LogInTest {
      * Test method/Тест
      */
     @Test
+    @Description("Testing my abilities")
     public void logIn() {
         logInPage.inputUsername(ConfProperties.getProperty("UserName"));
         logInPage.pressLogInButton();
@@ -47,7 +49,7 @@ public class LogInTest {
         logInPage.pressLogInButton();
         profilePage.pressUserMenu();
         profilePage.pressMailButton();
-        int counter = 0;
+       int counter = 0;
         for (WebElement webElement : inboxMailPage.getMessages())
             if (webElement.findElement(By.cssSelector(ConfProperties.getProperty("MailCssSelector"))).getText().
                     equals("Simbirsoft Тестовое задание")) counter++;
@@ -62,7 +64,9 @@ public class LogInTest {
      * Final method for closing a browser/Финальный метод для закрытия браузера
      */
     @AfterClass
-    public static void finalizeWork(){
+    public static void finalizeWork() {
+        profilePage.pressUserMenu();
+        profilePage.pressExitButton();
         webDriver.quit();
     }
 }

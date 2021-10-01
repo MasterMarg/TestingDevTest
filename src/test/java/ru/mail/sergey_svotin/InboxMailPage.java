@@ -18,7 +18,7 @@ public class InboxMailPage {
     /**
      * Locating message entries/Определение писем в ящике
      */
-    @FindBy(className = "ns-view-messages-item-wrap ns-view-id")
+    @FindBy(className = "mail-MessageSnippet")
     private List<WebElement> messages;
 
     /**

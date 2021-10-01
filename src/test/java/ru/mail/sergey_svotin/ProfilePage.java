@@ -23,8 +23,14 @@ public class ProfilePage {
     /**
      * Locating "Mail" button/Определение кнопки "Почта"
      */
-    @FindBy(className = "menu-item_action_mail")
+    @FindBy(className = "legouser__menu-item_action_mail")
     private WebElement mailButton;
+
+    /**
+     * Locating exit button/Определение кнопки выхода
+     */
+    @FindBy(className = "legouser__menu-item_action_exit")
+    private WebElement exitButton;
 
     /**
      * This method clicks on a popping-up user's menu/Метод для открытия всплывающего меню пользователя
@@ -38,5 +44,12 @@ public class ProfilePage {
      */
     public void pressMailButton() {
         mailButton.click();
+    }
+
+    /**
+     * This method clicks on an "Exit" button/Метод для нажатия кнопки выхода
+     */
+    public void pressExitButton(){
+        exitButton.click();
     }
 }
