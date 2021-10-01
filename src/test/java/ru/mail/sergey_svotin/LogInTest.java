@@ -14,10 +14,10 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class LogInTest {
-    public static WebDriver webDriver;
-    public static LogInPage logInPage;
-    public static ProfilePage profilePage;
-    public static InboxMailPage inboxMailPage;
+    private static WebDriver webDriver;
+    private static LogInPage logInPage;
+    private static ProfilePage profilePage;
+    private static InboxMailPage inboxMailPage;
 
     /**
      * Setting up the environment/Первоначальная настройка
@@ -50,13 +50,10 @@ public class LogInTest {
         int counter = 0;
         for (WebElement webElement : inboxMailPage.getMessages())
             if (webElement.findElement(By.cssSelector(ConfProperties.getProperty("MailCssSelector"))).getText().
-                    equals("Simbirsoft Тестовое задание")) counter++; /* кириллица
-                    equals(ConfProperties.getProperty("MailSubjectPattern")) counter++;*/
+                    equals("Simbirsoft Тестовое задание")) counter++;
         inboxMailPage.pressComposeMailButton();
         inboxMailPage.inputAddress(ConfProperties.getProperty("E-mail"));
-        inboxMailPage.inputMailSubject("Simbirsoft Тестовое задание. Свотин"); /*и снова кириллица
-        inboxMailPage.inputMailSubject(ConfProperties.getProperty("SubjectPart1")+" "+ConfProperties.
-                getProperty("SubjectPart2")); */
+        inboxMailPage.inputMailSubject("Simbirsoft Тестовое задание. Свотин");
         inboxMailPage.inputMailText(Integer.toString(counter));
         inboxMailPage.pressSendButton();
     }

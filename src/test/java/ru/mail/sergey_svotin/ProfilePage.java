@@ -17,13 +17,13 @@ public class ProfilePage {
     /**
      * Locating user's menu pop-up element/Определение кнопки меню пользователя
      */
-    @FindBy(xpath = "//*[contains(@class, 'user-account')]")
+    @FindBy(className = "user-account")
     private WebElement userMenu;
 
     /**
      * Locating "Mail" button/Определение кнопки "Почта"
      */
-    @FindBy(xpath = "//*[contains(@class, 'menu-item_action_mail')]")
+    @FindBy(className = "menu-item_action_mail")
     private WebElement mailButton;
 
     /**

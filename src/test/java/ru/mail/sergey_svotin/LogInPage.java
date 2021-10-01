@@ -17,20 +17,20 @@ public class LogInPage {
     /**
      * Locating field for a username/Определение поля ввода имени пользователя
      */
-    @FindBy(xpath = "//*[contains(@id, 'passp-field-login')]")
+    @FindBy(id ="passp-field-login")
     private WebElement loginField;
 
 
     /**
      * Locating log in button/Определение кнопки входа в систему
      */
-    @FindBy(xpath = "//*[contains(@id, 'passp:sign-in')]")
+    @FindBy(id = "passp:sign-in")
     private WebElement logInButton;
 
     /**
      * Locating field for a password/Определение поля для ввода пароля
      */
-    @FindBy(xpath = "//*[contains(@id, 'passp-field-passwd')]")
+    @FindBy(id = "passp-field-passwd")
     private WebElement passwordField;
 
     /**

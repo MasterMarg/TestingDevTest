@@ -18,7 +18,7 @@ public class InboxMailPage {
     /**
      * Locating message entries/Определение писем в ящике
      */
-    @FindBy(xpath =" //*[contains(@class, 'ns-view-messages-item-wrap ns-view-id')]" )
+    @FindBy(className = "ns-view-messages-item-wrap ns-view-id")
     private List<WebElement> messages;
 
     /**

@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfProperties {
-    protected static FileInputStream fileInputStream;
-    protected static Properties properties;
+    private static FileInputStream fileInputStream;
+    private static Properties properties;
     static {
         try {
             fileInputStream = new FileInputStream("src/test/resources/conf.properties");
